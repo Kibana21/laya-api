@@ -67,6 +67,8 @@ Environment variables:
 
 `main.py` sets `HF_HUB_OFFLINE=1`, so a missing local file fails at startup instead of being downloaded.
 
+For what checkpoints are and what happens at startup and per request, see [HOW_IT_WORKS.md](HOW_IT_WORKS.md).
+
 ## How the model is stored
 
 GitHub rejects files over 100 MB, so each `model.safetensors` is split into 45 MiB parts in `model_chunks/`. Small files (configs, tokenizers) are kept whole in `model_chunks/files/`. `model_chunks/manifest.json` records the SHA-256 of every part and every original file.
