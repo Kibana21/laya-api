@@ -1,0 +1,14 @@
+# Virtual environment
+.venv/
+
+# Model folder rebuilt from model_chunks/ (python3 model_chunks.py join)
+models/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
