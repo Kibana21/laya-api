@@ -16,8 +16,8 @@ Requires Python 3.10–3.13 and git.
 
 ```bash
 # 1. Clone the repo (includes the model, split into parts under model_chunks/)
-git clone <this-repo-url> laya_api
-cd laya_api
+git clone https://github.com/Kibana21/laya-api.git
+cd laya-api
 
 # 2. Rebuild the model: verifies every part, writes models/laya/, verifies the result
 python3 model_chunks.py join
@@ -84,7 +84,7 @@ To refresh the model from Hugging Face: `python download_model.py`, then `python
 The parts total 2.2 GB and GitHub refuses a single push over 2 GB, so push one checkpoint at a time:
 
 ```bash
-git remote add origin <your-repo-url>
+git remote add origin https://github.com/Kibana21/laya-api.git
 
 git add .gitignore README.md requirements.txt main.py download_model.py model_chunks.py \
         model_chunks/manifest.json model_chunks/files model_chunks/model.safetensors.part*
